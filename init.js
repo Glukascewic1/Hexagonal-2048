@@ -159,7 +159,7 @@ var colours  = []; // Contains the 21 (counting duplicates) possible fill
                    //   colours of the hexagonal tiles on the board. colours[n]
                    //   is the colour of all tiles displaying the value 2^n, or
                    //   the colour of the empty tile when n = 0. The greatest
-                   //   possible tile value achievable on the board is 2^20.
+                   //   possible tile value achievable on the board is 2^22.
 /*
    colours = [
        // From the original game.
@@ -184,9 +184,11 @@ var colours  = []; // Contains the 21 (counting duplicates) possible fill
        color( 94, 160, 223),  //   65536
        color(  0, 124, 190),  //  131072
        // Arbitrarily incrementing by (10,20,-20) hereon.
-       color( 10, 144, 170),  //  262114
+       color( 10, 144, 170),  //  262144
        color( 20, 164, 150),  //  524288
-       color( 30, 184, 130)]; // 1048576
+       color( 30, 184, 130),  // 1048576
+       color( 40, 204, 110),  // 2097152
+       color( 50, 224,  90)];
 */
 
 var lightTextColour = {}; // color(249, 246, 242), the text colour of all tiles
@@ -195,9 +197,9 @@ var darkTextColour  = {}; // color(119, 110, 101), the text colour of the 2 and
                           //   4 tiles.
 
 // Internal variables.
-const initialSpawn = 3; // The number of tiles spawned at the beginning of each
+const initialSpawn = 2; // The number of tiles spawned at the beginning of each
                         //   game.
-const moveSpawn    = 2; // The number of tiles spawned after each move.
+const moveSpawn    = 1; // The number of tiles spawned after each move.
 
 var moveFrames = 0;     // The number of frames remaining in the tile-sliding
                     //   animation following a move.
